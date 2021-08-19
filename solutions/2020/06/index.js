@@ -15,7 +15,7 @@ const part1 = (input) => {
     // Create a set to keep count each "yes" answer
     let answerSet = new Set()
 
-    // Loop through a group's answers
+    // Loop through group's answers
     for (let i = 0; i < parsed.length; i++) {
       answerSet.add(parsed[i])
     }
@@ -29,15 +29,43 @@ const part1 = (input) => {
 
 // Execute function for part1 of the problem
 const result1 = part1(getInput)
-console.log(`Part 1: ${result1} sum of the counts`)
+console.log(`Part 1: Sum of the counts = ${result1}`)
 
 
 // // Defined function for part2 of the problem
-// const part2 = (input) => {
-  // for (let i=0; i < input.length; i++){
-  // }
-// }
+const part2 = (input) => {
+  // Initialize sumCount
+  let sumCount = 0
 
-// // Execute function for part1 of the problem
-// const result2 = part2(getInput)
-// console.log(`Part 2: Missing ID ${result2}`)
+  // Loop through all groups
+  for (let i=0; i < input.length; i++){
+    // Initialize default number of people in group to one
+    let numberOfParticipants = 1
+
+    // Update numberOfParticipants to proper count if greater than one
+    if (input[i].match(/\n/g)){
+      numberOfParticipants = 1 + input[i].match(/\n/g).length
+    }
+    
+    // Parse the answers
+    const parsed = input[i].replace(/(\r\n|\n|\r)/gm, "")
+
+    // Create a dictionary to track answers
+    let dictionary = {}
+
+    // Loop through group's answers
+    for (let i = 0; i < parsed.length; i++) {
+      if(!dictionary[parsed[i]]) dictionary[parsed[i]] = 0
+
+      dictionary[parsed[i]]++
+
+      if (dictionary[parsed[i]] === numberOfParticipants) sumCount++
+    }
+  }
+
+  return sumCount
+}
+
+// Execute function for part1 of the problem
+const result2 = part2(getInput)
+console.log(`Part 2: Sum of the adjusted counts = ${result2}`)
