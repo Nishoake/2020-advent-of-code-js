@@ -89,8 +89,3 @@ const part2 = (input) => {
 // Execute function for part1 of the problem
 const result2 = part2(getInput)
 console.log(`Part 2: Missing ID ${result2}`)
-
-// export default {
-//   part1,
-//   part2,
-// }
