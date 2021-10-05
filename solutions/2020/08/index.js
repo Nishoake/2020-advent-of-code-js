@@ -1,25 +1,27 @@
 const Input = require('./input')
 
 // Parsing the input as an Array of numbers
-const getInput = Input.numbers.split('\n').map(Number)
+const getInput = Input.instructions.split('\n').map(Number)
 
 
 // Defined function for part1 of the problem
 const part1 = () => {
-  console.log('Insert the result')
+  // Insert Code
 }
 
 // Execute function for part1 of the problem
-part1()
+const result1 = part1(getInput)
+console.log(`Part 1: ... = ${result1}`)
 
 
 // Defined function for part2 of the problem
 const part2 = () => {
-  console.log('Insert the result')
+  // Insert Code
 }
 
 // Execute function for part1 of the problem
-part2()
+const result2 = part2(getInput)
+console.log(`Part 2: ... = ${result1}`)
 
 // export default {
 //   part1,

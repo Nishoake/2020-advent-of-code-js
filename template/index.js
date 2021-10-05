@@ -5,8 +5,8 @@ const getInput = Input.numbers.split('\n').map(Number)
 
 
 // Defined function for part1 of the problem
-const part1 = () => {
-  // Insert Code
+const part1 = (input) => {
+  console.log(`The parsed input = ${input}`)
 }
 
 // Execute function for part1 of the problem
@@ -15,8 +15,8 @@ console.log(`Part 1: ... = ${result1}`)
 
 
 // Defined function for part2 of the problem
-const part2 = () => {
-  // Insert Code
+const part2 = (input) => {
+  console.log(`The parsed input = ${input}`)
 }
 
 // Execute function for part1 of the problem
