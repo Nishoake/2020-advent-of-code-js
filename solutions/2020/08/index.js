@@ -6,22 +6,20 @@ const getInput = Input.numbers.split('\n').map(Number)
 
 // Defined function for part1 of the problem
 const part1 = () => {
-  // Insert Code
+  console.log('Insert the result')
 }
 
 // Execute function for part1 of the problem
-const result1 = part1(getInput)
-console.log(`Part 1: ... = ${result1}`)
+part1()
 
 
 // Defined function for part2 of the problem
 const part2 = () => {
-  // Insert Code
+  console.log('Insert the result')
 }
 
 // Execute function for part1 of the problem
-const result2 = part2(getInput)
-console.log(`Part 2: ... = ${result1}`)
+part2()
 
 // export default {
 //   part1,
