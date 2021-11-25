@@ -1,12 +1,20 @@
 const Input = require('./input')
 
 // Parsing the input as an Array of numbers
-const getInput = Input.sample.split('\n').map(Number)
+const getInput = Input.ratings.split('\n').map(Number)
 
 
 // Defined function for part1 of the problem
 const part1 = (input) => {
-  console.log(`The parsed input = ${input}`)
+  // Store input array information
+  const maxValue = Math.max(...input)
+  const numberOfDeltas = input.length
+
+  // Use relationships to solve for number of stepsBy1 and stepsBy3
+  const stepsBy3 = (maxValue - numberOfDeltas + 2) / 2
+  const stepsBy1 = numberOfDeltas - stepsBy3 + 1
+
+  return stepsBy1 * stepsBy3
 }
 
 // Execute function for part1 of the problem
