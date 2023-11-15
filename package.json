@@ -6,7 +6,10 @@
   "author": "Nishoake Sribavan <nishoake@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "new": "mkdir -p ./solutions/$YEAR/$DAY && cp -r ./template/ ./solutions/$YEAR/$DAY",
+    "new": "mkdir -p ./solutions/$DAY && cp -r ./template/ ./solutions/$DAY",
+    "execute": "cd solutions/$DAY/ && node index.js",
+    "git": "git add . && git commit -m",
+    "postgit": "git push --all",
     "test": "jest",
     "test:watch": "jest --watch"
   },
